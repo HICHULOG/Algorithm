@@ -1,7 +1,8 @@
 var map = function(arr, fn) {
     let returnedArray = [];
-    for (let [index, item] of arr.entries()) {
-        returnedArray.push(fn(item, index));
+    for (let i = 0; i < arr.length; i++) {
+        let item = arr[i]
+        returnedArray.push(fn(item, i));
     }
     return returnedArray;
 };
